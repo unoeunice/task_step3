@@ -1,11 +1,13 @@
 
 
-$("#myButtonNeighbour").click(function(e){
+$("#submitNeighbour").click(function(e){
     e.preventDefault();
     $.ajax({
-    url: "task_step3/php/neighbourhood.php", 
-    type: 'POST',
-    dataType:"json",
+    url: "../php/neighbourhood.php", 
+    
+   dataType:"json",
+
+   method: "post",
     
    data:{
     "lat":$('#api1param').val(),
