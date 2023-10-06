@@ -3,17 +3,25 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
 
-$URL='https://api.geonames.org/neighbourhoodJSON?lat='.$_REQUEST['lat']."&lng=".$_REQUEST["lng"]."&username=eunicesung";
+$url="http://api.geonames.org/neighbourhoodJSON?lat=".$_REQUEST['lat']."&lng=".$_REQUEST["lng"]."&username=eunicesung";
+
+//http://api.geonames.org/neighbourhoodJSON?lat=40.78343&lng=-73.96625&username=demo
+
+
 
 //initiliza client url session 
-
 $ch = curl_init();
 
-//fetch the url using the handle option
-curl_setopt($ch, CURLOPT_URL, $URL);
+
+curl_setopt($curl, CURLOPT_POST, true);
 
 // Set CURLOPT_RETURNTRANSFER to 1 to return the response as a string
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+
+//fetch the url using the handle option
+curl_setopt($ch, CURLOPT_URL, $url);
+
 
 // Execute the cURL session after the option/request
 $result = curl_exec($ch);
@@ -30,6 +38,8 @@ curl_close($ch);
 
 $decode = json_decode($result,true);
 
+
+
 $output['status']['code'] = "200";
 	$output['status']['name'] = "ok";
 	$output['status']['description'] = "success";
@@ -39,5 +49,6 @@ $output['status']['code'] = "200";
 	header('Content-Type: application/json; charset=UTF-8');
 
 	echo json_encode($output); 
+	
 
 ?>
