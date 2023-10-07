@@ -3,11 +3,10 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
 
-$url="http://api.geonames.org/neighbourhoodJSON?lat=".$_REQUEST['lat2']."&lng=".$_REQUEST["lng2"]."&username=eunicesung";
 
-//http://api.geonames.org/neighbourhoodJSON?lat=40.78343&lng=-73.96625&username=demo
+$url='http://api.geonames.org/oceanJSON?lat='.$_REQUEST['lat3']."&lng=".$_REQUEST["lng3"]."&username=eunicesung";
 
-
+//http://api.geonames.org/oceanJSON?lat=40.78343&lng=-43.96625&username=eunicesung
 
 //initiliza client url session 
 $ch = curl_init();

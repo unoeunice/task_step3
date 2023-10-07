@@ -23,7 +23,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>API 1</td>
+                <td>API 1 Neighbour </td>
                 <td><input type="text" id="api1param" placeholder="Enter lat" name="lat"></td>
                 <td><input type="text" id="api2param" placeholder="Enter lng" name="lng"></td>
                 
@@ -34,20 +34,22 @@
                 </td>
             </tr>
             <tr>
-                <td>API 2</td>
-                <td><input type="text" id="api3param" placeholder="Enter parameter"></td>
+                <td>API 2 Nearby Street </td>
+                <td><input type="text" id="api3param" placeholder="Enter lat" name="lat"></td>
+                <td><input type="text" id="api4param" placeholder="Enter lng" name="lng"></td>
                 <td>
-                    <input type="submit" value="submit">
+                    <input id='submitNearby' type="submit" value="submit">
                     
                 </td>
             </tr>
 
 
             <tr>
-                <td>API 3</td>
-                <td><input type="text" id="api4param" placeholder="Enter parameter"></td>
+                <td>API 3  Ocean</td>
+                <td><input type="text" id="api5param" placeholder="Enter lat"></td>
+                <td><input type="text" id="api6param" placeholder="Enter lng"></td>
                 <td>
-                    <input type="submit" value="submit">
+                    <input id='submitOcean' type="submit" value="submit">
                     
                 </td>
             </tr>
@@ -58,7 +60,9 @@
     
 
 </form>
-    <div id="result">Result:
+    <h3>Result:</h3>
+    <div id="result">
+        
        
     </div>
        <script src="jquery-3.7.1.min.js"></script>
